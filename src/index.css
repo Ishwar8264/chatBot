@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fade transition for welcome message */
+.welcome-message {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.welcome-message.opacity-0 {
+  opacity: 0;
+}

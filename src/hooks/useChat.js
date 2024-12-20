@@ -15,10 +15,8 @@ const useChat = () => {
                   timestamp: new Date(),
             };
 
-            // Add user message to the messages state
             setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-            // Normalize user input for better matching
             const userText = text.toLowerCase().trim();
 
             // Search for a match in the questionAnswers (case-insensitive and allows for partial matching)
