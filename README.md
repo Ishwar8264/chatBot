@@ -79,6 +79,11 @@ Follow these steps to set up the project locally:
    ```
 
 ## Screenshots
+![image](https://github.com/user-attachments/assets/c08ce65f-6415-4e92-a946-b9ea0dcf9df9)
+![image](https://github.com/user-attachments/assets/ce31690c-4aa4-4eae-aac9-41c716c8bbcc)
+![image](https://github.com/user-attachments/assets/9a2c42ec-453d-4b3f-996f-027a7ff40e21)
+
+
 
 ### Chat Interface Layout
 ![Chat Interface Layout](https://via.placeholder.com/800x400.png?text=Chat+Interface+Screenshot)
