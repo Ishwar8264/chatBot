@@ -169,7 +169,7 @@ const ChatInterface = () => {
           {/* Send Button */}
           <button
             onClick={handleSend}
-            className="absolute right-2 p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none shadow-md"
+            className="absolute right-4 m-0 p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none shadow-md"
           >
             <IoMdSend size={20} />
           </button>
