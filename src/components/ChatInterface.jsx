@@ -11,7 +11,6 @@ const ChatInterface = () => {
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem("chatbottheme") ? true : false
   );
-  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const [showBottomDiv, setShowBottomDiv] = useState(false); // State for the bottom div
   const chatRef = useRef(null);
   const messageEndRef = useRef(null);
@@ -37,7 +36,6 @@ const ChatInterface = () => {
         sendMessage(input);
       }
       setInput("");
-      setHasUserInteracted(true);
     }
   };
 
@@ -54,7 +52,7 @@ const ChatInterface = () => {
     }
   }, [messages]);
 
-  const headerClick = () => {
+  const toggleBottomDiv = () => {
     setShowBottomDiv(!showBottomDiv); // Toggle the visibility of the bottom div
   };
 
@@ -66,8 +64,8 @@ const ChatInterface = () => {
     >
       {/* Header */}
       <header
-        onClick={headerClick}
-        className="w-full p-4 text-center text-xl font-bold shadow-md bg-gradient-to-r from-blue-500 to-purple-500 text-white cursor-pointer"
+        onClick={toggleBottomDiv}
+        className="fixed bottom-0 w-full p-4 text-center text-xl font-bold shadow-md bg-gradient-to-r from-blue-500 to-purple-500 text-white cursor-pointer z-10"
       >
         Chat Interface
       </header>
@@ -75,7 +73,7 @@ const ChatInterface = () => {
       {/* Chat Messages */}
       <div
         ref={chatRef}
-        className={`flex-1 overflow-y-auto p-4 space-y-4 ${
+        className={`flex-1 overflow-y-auto p-4 space-y-4 mb-16 ${
           isDarkMode ? "bg-gray-800" : "bg-white"
         }`}
       >
